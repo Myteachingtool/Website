@@ -343,8 +343,8 @@
     }
 
     .banner-left { display: flex; align-items: center; gap: 8px; min-width: 0; flex: 1; }
-    .banner-title { font-family: "Montserrat", sans-serif; font-size: clamp(0.7rem, 1.4vw, 0.86rem); font-weight: 800; letter-spacing: 0.35px; line-height: 1.12; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .banner-sub { font-size: clamp(0.5rem, 1vw, 0.64rem); color: rgba(255, 255, 255, 0.88); margin-top: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .banner-title { font-family: "Montserrat", sans-serif; font-size: clamp(0.72rem, 1.4vw, 0.88rem); font-weight: 800; letter-spacing: 0.35px; line-height: 1.14; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .banner-sub { font-size: clamp(0.45rem, 0.95vw, 0.56rem); font-weight: 700; letter-spacing: 0.25px; line-height: 1.15; color: rgba(255, 255, 255, 0.84); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .banner-right-cta { font-size: clamp(0.64rem, 1.25vw, 0.74rem); font-weight: 800; white-space: nowrap; flex-shrink: 0; }
 
     /* Quick Pill Buttons */
@@ -525,43 +525,70 @@
       align-items: center;
       justify-content: space-between;
       gap: 8px;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       margin-bottom: 0;
-      padding: 2px 4px;
+      padding: 4px 6px;
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+    }
+
+    .edu-shorts-brand-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      border: 0;
+      pointer-events: auto;
+    }
+
+    .edu-shorts-icon-badge {
+      width: 24px;
+      height: 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      filter: drop-shadow(0 2px 6px rgba(255, 0, 51, 0.55));
+    }
+
+    .edu-shorts-icon-badge svg {
+      width: 22px;
+      height: 22px;
+      display: block;
+    }
+
+    .edu-shorts-wordmark {
+      font-family: "Montserrat", "Plus Jakarta Sans", sans-serif;
+      font-size: 1.06rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      color: #ffffff;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.88);
     }
 
     .reels-header-actions {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
       flex-shrink: 0;
-    }
-
-    .reels-slide-counter-pill {
-      display: inline-flex;
-      align-items: center;
-      padding: 3px 9px;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.78);
-      border: 1px solid rgba(34, 211, 238, 0.45);
-      color: var(--neon-cyan);
-      font-size: 0.68rem;
-      font-weight: 800;
-      letter-spacing: 0.03em;
-      backdrop-filter: blur(8px);
+      pointer-events: auto;
     }
 
     .reels-fullscreen-toggle-btn {
       display: inline-flex;
       align-items: center;
       gap: 5px;
-      min-height: 36px;
-      padding: 5px 12px;
+      min-height: 34px;
+      padding: 5px 11px;
       border-radius: 999px;
       border: 1px solid rgba(255, 42, 133, 0.65);
       background: linear-gradient(135deg, #ff2a85, #be185d);
       color: #ffffff;
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       font-weight: 800;
       cursor: pointer;
       box-shadow: 0 4px 14px rgba(255, 42, 133, 0.35);
@@ -573,31 +600,46 @@
 
     .reels-feed-section.full-tab-reels-mode .section-header-row {
       position: absolute;
-      top: calc(env(safe-area-inset-top, 0px) + 8px);
-      left: 10px;
-      right: 10px;
+      top: calc(env(safe-area-inset-top, 0px) + 10px);
+      left: 14px;
+      right: 14px;
       z-index: 25;
-      padding: 4px 8px;
-      border-radius: 999px;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.36));
-      backdrop-filter: blur(8px);
-      pointer-events: auto;
-    }
-
-    .reels-feed-section.full-tab-reels-mode .section-title {
-      font-size: 0.8rem;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
+      padding: 0;
+      border-radius: 0;
+      background: transparent;
+      border: 0;
+      box-shadow: none;
+      backdrop-filter: none;
+      pointer-events: none;
     }
 
     .reels-top-home-btn { display: none !important; }
     .reels-feed-section.full-tab-reels-mode .reels-top-home-btn {
       display: inline-flex !important;
       align-items: center;
-      gap: 4px;
-      min-height: 34px;
-      padding: 4px 12px !important;
-      font-size: 0.72rem !important;
+      justify-content: center;
+      width: 38px;
+      height: 38px;
+      padding: 0 !important;
       border-radius: 999px !important;
+      border: 1px solid rgba(255, 255, 255, 0.28) !important;
+      background: rgba(10, 14, 24, 0.56) !important;
+      color: #ffffff !important;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+      transition: transform 0.14s ease, background 0.14s ease, border-color 0.14s ease;
+    }
+
+    .reels-feed-section.full-tab-reels-mode .reels-top-home-btn:active {
+      transform: scale(0.92);
+      background: rgba(255, 42, 133, 0.35) !important;
+      border-color: rgba(255, 255, 255, 0.55) !important;
+    }
+
+    .reels-top-home-btn svg {
+      width: 19px;
+      height: 19px;
+      display: block;
     }
 
     .reels-deck-viewport {
@@ -844,6 +886,20 @@
       background: rgba(255, 42, 133, 0.3);
       border-color: var(--neon-pink);
       color: #ff4d97;
+    }
+
+    .reel-cc-btn {
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.76rem;
+      font-weight: 900;
+      letter-spacing: 0.03em;
+    }
+
+    .reel-cc-btn.cc-active {
+      background: rgba(34, 211, 238, 0.26);
+      border-color: var(--neon-cyan);
+      color: var(--neon-cyan);
+      box-shadow: 0 0 12px rgba(34, 211, 238, 0.35);
     }
 
     .reel-rail-item {
@@ -1663,22 +1719,22 @@
             <input type="text" id="cfgFaviconUrl" placeholder="https://drive.google.com/file/d/..." oninput="attachLivePreviewToInput(this)" />
             <div class="live-media-preview-box"></div>
           </div>
-          <div class="field-group" data-style-target="articlesSection">
+          <div class="field-group" data-style-target="articlesSectionTitle">
             <label>Articles Section Title</label>
             <input type="text" id="cfgArticlesHeading" />
             <div class="mini-gdocs-bar"></div>
           </div>
-          <div class="field-group" data-style-target="portalHubCard">
+          <div class="field-group" data-style-target="hubTagText">
             <label>Hub Tag</label>
             <input type="text" id="cfgHubTag" />
             <div class="mini-gdocs-bar"></div>
           </div>
-          <div class="field-group" data-style-target="portalHubCard">
+          <div class="field-group" data-style-target="hubHeadingText">
             <label>Hub Heading</label>
             <input type="text" id="cfgHubHeading" />
             <div class="mini-gdocs-bar"></div>
           </div>
-          <div class="field-group" style="grid-column:1 / -1;" data-style-target="portalHubCard">
+          <div class="field-group" style="grid-column:1 / -1;" data-style-target="hubDescText">
             <label>Hub Description</label>
             <textarea id="cfgHubDesc" style="min-height:58px;"></textarea>
             <div class="mini-gdocs-bar"></div>
@@ -1687,7 +1743,7 @@
 
         <div class="android-tile-card form-grid">
           <strong style="font-size:0.86rem; color:var(--neon-cyan);">ℹ️ Full-Page About Section Content (Shown When User Clicks "About" in Menu)</strong>
-          <div class="field-group" data-style-target="aboutPageContentHost">
+          <div class="field-group" data-style-target="aboutHeadingText">
             <label>About Page Heading</label>
             <input type="text" id="cfgAboutHeading" />
             <div class="mini-gdocs-bar"></div>
@@ -1718,7 +1774,7 @@
               <option value="movieReview">Movie Review Filter Menu (OTT • By Genres • By Year)</option>
             </select>
           </div>
-          <div class="field-group">
+          <div class="field-group" data-style-target="movieMenuHeadingText">
             <label>Movie Review Menu Header Title</label>
             <input type="text" id="cfgMovieMenuHeading" placeholder="Browse Reviews" />
             <div class="mini-gdocs-bar"></div>
@@ -1750,17 +1806,17 @@
         </div>
         <div class="android-tile-card form-grid two-col">
           <div style="grid-column:1 / -1;"><strong style="font-size:0.86rem;">Education Content Folder Banner</strong></div>
-          <div class="field-group" data-style-target="mainNeonBanner">
+          <div class="field-group" data-style-target="bannerTitleText">
             <label>Banner Title</label>
             <input type="text" id="cfgBannerTitle" />
             <div class="mini-gdocs-bar"></div>
           </div>
-          <div class="field-group" data-style-target="mainNeonBanner">
+          <div class="field-group" data-style-target="bannerSubText">
             <label>Banner Subtitle</label>
             <input type="text" id="cfgBannerSub" />
             <div class="mini-gdocs-bar"></div>
           </div>
-          <div class="field-group" data-style-target="mainNeonBanner">
+          <div class="field-group" data-style-target="bannerCtaText">
             <label>Banner Right CTA</label>
             <input type="text" id="cfgBannerCta" />
             <div class="mini-gdocs-bar"></div>
@@ -1862,7 +1918,11 @@
             </label>
           </div>
 
-          <div class="field-group"><label>Section Heading</label><input type="text" id="cfgReelsSectionTitle" /></div>
+          <div class="field-group" data-style-target="reelsSectionTitle">
+            <label>Section Heading</label>
+            <input type="text" id="cfgReelsSectionTitle" />
+            <div class="mini-gdocs-bar"></div>
+          </div>
 
           <div class="form-grid two-col">
             <div class="field-group">
@@ -1942,7 +2002,7 @@
 
         <div class="android-tile-card form-grid">
           <strong style="font-size:0.86rem; color:var(--neon-cyan);">📌 Notice Board Editor (with Table Add/Remove/Sub-Table Controls)</strong>
-          <div class="field-group" data-style-target="noticeBoardPanel">
+          <div class="field-group" data-style-target="noticeTitleText">
             <label>Notice Board Heading</label>
             <input type="text" id="cfgNoticeTitle" />
             <div class="mini-gdocs-bar"></div>
@@ -2312,7 +2372,7 @@
       ],
       reelsFeed: {
         enabled: true,
-        sectionTitle: "🎬 Shorts & Reels Scroll Feed",
+        sectionTitle: "Edu Shorts",
         items: [
           {
             id: "reel-ivc-1",
@@ -2524,12 +2584,13 @@
 
       const loggedIn = isAdminLoggedIn();
       document.getElementById("aboutPageContentHost").innerHTML = `
-        <h1 style="font-size:clamp(1.25rem, 2.8vw, 1.85rem); font-weight:900; margin-bottom:10px;">${escapeHtml(siteData.aboutHeading || "About Crack CGPSC")}</h1>
+        <h1 data-ve-id="aboutHeadingText" style="font-size:clamp(1.25rem, 2.8vw, 1.85rem); font-weight:900; margin-bottom:10px;">${escapeHtml(siteData.aboutHeading || "About Crack CGPSC")}</h1>
         <div class="article-body-content">${renderRichHtmlBody(siteData.aboutBody || DEFAULT_DATA.aboutBody)}</div>
         <div style="margin-top:26px; padding-top:14px; border-top:1px solid rgba(255,255,255,0.1); display:flex; justify-content:flex-end;">
           <button type="button" class="btn" style="font-size:0.72rem; opacity:0.88;" onclick="openLoginOrAdmin()">${loggedIn ? "Admin Studio" : "Login"}</button>
         </div>
       `;
+      applySavedElementStylesAndAutoFit();
       pushAppView("about");
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
@@ -2878,7 +2939,7 @@
       const isShorts = clean.includes("/shorts/");
       const m = clean.match(/(?:\/shorts\/|[?&]v=|youtu\.be\/|\/embed\/)([a-zA-Z0-9_-]{6,})/);
       if (!m || !m[1]) return null;
-      return { videoId: m[1], embedUrl: `https://www.youtube.com/embed/${m[1]}`, isShorts };
+      return { videoId: m[1], embedUrl: `https://www.youtube-nocookie.com/embed/${m[1]}`, isShorts };
     }
 
     function parseDriveFileId(url) {
@@ -2920,7 +2981,6 @@
             <img class="reel-poster-layer" src="${escapeHtml(thumb)}" alt="${escapeHtml(caption || "Short Video")}" loading="lazy" />
             <iframe class="inpage-shorts-iframe" data-reel-idx="${index}" data-src="${escapeHtml(apiSrc)}" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <div class="reel-center-controls-layer">
-              <button type="button" class="reel-center-playpause-btn" aria-label="Play or Pause">▶</button>
               <span class="reel-heart-burst" aria-hidden="true">♥</span>
               <span class="reel-speed-hold-badge">2x ▶▶</span>
             </div>
@@ -2970,12 +3030,40 @@
       let currentIndex = 0;
       let isSectionVisible = isFullReelsTabOpen;
       let globalMuted = false;
-      let globalCoverMode = false;
+      let globalCaptionsOn = false;
       const playStateByIdx = new Map();
-      const counterEl = secEl.querySelector(".reels-slide-counter-pill");
 
-      const updateCounter = (idx) => {
-        if (counterEl) counterEl.textContent = `${idx + 1} / ${cards.length}`;
+      const buildYtSrcForState = (baseSrc, autoplay) => {
+        let s = baseSrc || "";
+        s = s.replace(/autoplay=[01]/, `autoplay=${autoplay ? 1 : 0}`);
+        s = s.replace(/mute=[01]/, `mute=${globalMuted ? 1 : 0}`);
+        s = s.replace(/cc_load_policy=[01]/, `cc_load_policy=${globalCaptionsOn ? 1 : 0}`);
+        return s;
+      };
+
+      const applyCaptionsToCard = (card, reloadYoutube = false) => {
+        if (!card) return;
+        const vid = card.querySelector("video.auto-scroll-reel-video");
+        if (vid && vid.textTracks) {
+          for (let i = 0; i < vid.textTracks.length; i++) {
+            vid.textTracks[i].mode = globalCaptionsOn ? "showing" : "disabled";
+          }
+        }
+        const iframe = card.querySelector("iframe.inpage-shorts-iframe");
+        if (iframe && iframe.dataset.src) {
+          if (iframe.getAttribute("src")) {
+            if (globalCaptionsOn) {
+              sendYtCommand(iframe, "loadModule", ["captions"]);
+              sendYtCommand(iframe, "setOption", ["captions", "track", { languageCode: "en" }]);
+            } else {
+              sendYtCommand(iframe, "unloadModule", ["captions"]);
+            }
+            if (reloadYoutube) {
+              const isCur = cards.indexOf(card) === currentIndex;
+              iframe.src = buildYtSrcForState(iframe.dataset.src, isCur && (isSectionVisible || isFullReelsTabOpen));
+            }
+          }
+        }
       };
 
       const ensureHydratedWindow = (centerIdx) => {
@@ -2996,7 +3084,23 @@
           const ytIframe = card.querySelector("iframe.inpage-shorts-iframe");
           if (ytIframe) {
             if (near && !ytIframe.getAttribute("src") && ytIframe.dataset.src) {
-              ytIframe.src = ytIframe.dataset.src;
+              const shouldAuto = idx === centerIdx && (isSectionVisible || isFullReelsTabOpen);
+              const targetSrc = buildYtSrcForState(ytIframe.dataset.src, shouldAuto);
+              ytIframe.onload = () => {
+                const poster = card.querySelector(".reel-poster-layer");
+                if (poster) poster.style.opacity = "0";
+                if (idx === currentIndex && (isSectionVisible || isFullReelsTabOpen)) {
+                  sendYtCommand(ytIframe, globalMuted ? "mute" : "unMute");
+                  if (globalCaptionsOn) {
+                    sendYtCommand(ytIframe, "loadModule", ["captions"]);
+                  } else {
+                    sendYtCommand(ytIframe, "unloadModule", ["captions"]);
+                  }
+                  sendYtCommand(ytIframe, "playVideo");
+                  setCardPlayVisual(idx, true);
+                }
+              };
+              ytIframe.src = targetSrc;
             } else if (!near && ytIframe.getAttribute("src") && Math.abs(idx - centerIdx) > 2) {
               ytIframe.removeAttribute("src");
             }
@@ -3032,12 +3136,13 @@
         });
       };
 
-      const syncCoverButtons = () => {
-        cards.forEach(c => c.classList.toggle("cover-mode", globalCoverMode));
-        secEl.querySelectorAll(".reel-fit-btn").forEach(btn => {
-          btn.textContent = globalCoverMode ? "⊡" : "⛶";
-          const lbl = btn.parentElement?.querySelector(".reel-rail-label");
-          if (lbl) lbl.textContent = globalCoverMode ? "Fit" : "Fill";
+      const syncCaptionButtons = () => {
+        secEl.querySelectorAll(".reel-cc-btn").forEach(btn => {
+          btn.classList.toggle("cc-active", globalCaptionsOn);
+          btn.setAttribute("aria-pressed", String(globalCaptionsOn));
+          btn.setAttribute("aria-label", globalCaptionsOn ? "Turn Captions Off" : "Turn Captions On");
+          const lbl = btn.parentElement?.querySelector(".reel-cc-label");
+          if (lbl) lbl.textContent = globalCaptionsOn ? "CC On" : "CC Off";
         });
       };
 
@@ -3066,10 +3171,10 @@
         if (vid) {
           vid.muted = globalMuted;
           vid.volume = 1;
+          applyCaptionsToCard(card, false);
           vid.play().then(() => {
             setCardPlayVisual(idx, true);
           }).catch(() => {
-            // Browser autoplay policy fallback: start muted if unmuted autoplay blocked
             vid.muted = true;
             globalMuted = true;
             syncMuteButtons();
@@ -3078,7 +3183,11 @@
         }
         const iframe = card.querySelector("iframe.inpage-shorts-iframe");
         if (iframe && iframe.getAttribute("src")) {
-          sendYtCommand(iframe, "unloadModule", ["captions"]);
+          if (globalCaptionsOn) {
+            sendYtCommand(iframe, "loadModule", ["captions"]);
+          } else {
+            sendYtCommand(iframe, "unloadModule", ["captions"]);
+          }
           sendYtCommand(iframe, globalMuted ? "mute" : "unMute");
           sendYtCommand(iframe, "playVideo");
           setCardPlayVisual(idx, true);
@@ -3098,7 +3207,6 @@
       const activateSlide = (nextIdx) => {
         const clamped = Math.max(0, Math.min(cards.length - 1, nextIdx));
         currentIndex = clamped;
-        updateCounter(clamped);
         pauseAllMedia();
         ensureHydratedWindow(clamped);
         if (isSectionVisible || isFullReelsTabOpen) {
@@ -3125,7 +3233,7 @@
         const likeBtn = card.querySelector(".reel-like-btn");
         const likeLbl = card.querySelector(".reel-like-count");
         const muteBtn = card.querySelector(".reel-mute-btn");
-        const fitBtn = card.querySelector(".reel-fit-btn");
+        const ccBtn = card.querySelector(".reel-cc-btn");
         const progWrap = card.querySelector(".reel-progress-wrap");
         const progFill = card.querySelector(".reel-progress-fill");
 
@@ -3166,11 +3274,13 @@
           });
         }
 
-        if (fitBtn) {
-          fitBtn.addEventListener("click", (e) => {
+        if (ccBtn) {
+          ccBtn.addEventListener("click", (e) => {
             e.stopPropagation();
-            globalCoverMode = !globalCoverMode;
-            syncCoverButtons();
+            globalCaptionsOn = !globalCaptionsOn;
+            syncCaptionButtons();
+            applyCaptionsToCard(cards[currentIndex], true);
+            showToast(globalCaptionsOn ? "Captions ON" : "Captions OFF");
           });
         }
 
@@ -3342,8 +3452,7 @@
       window.addEventListener("keydown", onKeyDown);
 
       syncMuteButtons();
-      syncCoverButtons();
-      updateCounter(0);
+      syncCaptionButtons();
       ensureHydratedWindow(0);
       setTimeout(() => {
         if (isSectionVisible || isFullReelsTabOpen) playCardAt(0);
@@ -3392,11 +3501,14 @@
       return Array.from(new Set([...base, ...extra]));
     }
 
-    function hydrateMiniGdocsBars() {
+    const GDOCS_FONT_SIZES = [8, 9, 10, 11, 12, 13, 14, 16, 18, 20, 22, 24, 28, 32, 36, 42, 48];
+
+    function hydrateMiniGdocsBars(rootEl = document) {
       const fontNames = getAllAvailableFontNames();
       const optsHtml = `<option value="">Font</option>` + fontNames.map(fn => `<option value="${escapeHtml(fn)}">${escapeHtml(fn)}</option>`).join("");
+      const sizeOptsHtml = `<option value="">Size</option>` + GDOCS_FONT_SIZES.map(sz => `<option value="${sz}">${sz}px</option>`).join("");
 
-      document.querySelectorAll(".mini-gdocs-bar").forEach(bar => {
+      rootEl.querySelectorAll(".mini-gdocs-bar").forEach(bar => {
         const group = bar.closest(".field-group");
         const targetId = group?.dataset?.styleTarget || "";
         const inp = group?.querySelector("input, textarea");
@@ -3404,24 +3516,55 @@
 
         bar.innerHTML = `
           <select class="mini-font-sel" title="Font Family">${optsHtml}</select>
-          <button type="button" class="mini-gdocs-btn" title="Download Free Google Font">+ Font</button>
+          <button type="button" class="mini-gdocs-btn mini-addfont-btn" title="Download Free Google Font">+ Font</button>
+          <button type="button" class="mini-gdocs-btn mini-size-dec" title="Decrease Text Size">A-</button>
+          <select class="mini-size-sel" title="Text Size">${sizeOptsHtml}</select>
+          <button type="button" class="mini-gdocs-btn mini-size-inc" title="Increase Text Size">A+</button>
           <input type="color" class="mini-fg-col" title="Text Color" value="${escapeHtml(curStyle.textColor || "#ffffff")}" />
           <input type="color" class="mini-bg-col" title="Highlight / Box Color" value="${escapeHtml(curStyle.bgColor || "#0b0e16")}" />
-          <button type="button" class="mini-gdocs-btn" title="Bold"><strong>B</strong></button>
+          <button type="button" class="mini-gdocs-btn mini-bold-btn" title="Bold"><strong>B</strong></button>
         `;
 
         const fSel = bar.querySelector(".mini-font-sel");
         if (curStyle.fontFamily) fSel.value = curStyle.fontFamily;
 
+        const sSel = bar.querySelector(".mini-size-sel");
+        if (curStyle.fontSize) {
+          const curSz = String(Math.round(Number(curStyle.fontSize)));
+          if (!Array.from(sSel.options).some(o => o.value === curSz)) {
+            const opt = document.createElement("option");
+            opt.value = curSz;
+            opt.textContent = `${curSz}px`;
+            sSel.appendChild(opt);
+          }
+          sSel.value = curSz;
+        }
+
+        const applyMiniFontSize = (nextPx) => {
+          if (!targetId) return;
+          const clamped = Math.max(7, Math.min(72, Math.round(nextPx)));
+          siteData.elementStyles[targetId] = { ...(siteData.elementStyles[targetId] || {}), fontSize: clamped };
+          const strVal = String(clamped);
+          if (!Array.from(sSel.options).some(o => o.value === strVal)) {
+            const opt = document.createElement("option");
+            opt.value = strVal;
+            opt.textContent = `${clamped}px`;
+            sSel.appendChild(opt);
+          }
+          sSel.value = strVal;
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(siteData));
+          renderAll();
+        };
+
         fSel.addEventListener("change", () => {
           if (!targetId) return;
           siteData.elementStyles[targetId] = { ...(siteData.elementStyles[targetId] || {}), fontFamily: fSel.value };
-          if (inp && fSel.value) inp.style.fontFamily = fSel.value;
+          if (inp) inp.style.fontFamily = fSel.value ? `"${fSel.value}", sans-serif` : "";
           localStorage.setItem(STORAGE_KEY, JSON.stringify(siteData));
           renderAll();
         });
 
-        bar.querySelectorAll(".mini-gdocs-btn")[0].addEventListener("click", () => {
+        bar.querySelector(".mini-addfont-btn").addEventListener("click", () => {
           const fname = prompt("Enter Free Google Font Name (e.g. Outfit, Cinzel, Oswald, Lora, Caveat):");
           if (!fname || !fname.trim()) return;
           const clean = fname.trim();
@@ -3434,6 +3577,33 @@
           hydrateMiniGdocsBars();
           renderAll();
           showToast(`Font "${clean}" added`);
+        });
+
+        sSel.addEventListener("change", () => {
+          if (!targetId) return;
+          if (!sSel.value) {
+            const copy = { ...(siteData.elementStyles[targetId] || {}) };
+            delete copy.fontSize;
+            siteData.elementStyles[targetId] = copy;
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(siteData));
+            renderAll();
+            return;
+          }
+          applyMiniFontSize(Number(sSel.value));
+        });
+
+        bar.querySelector(".mini-size-dec").addEventListener("click", () => {
+          if (!targetId) return;
+          const liveEl = document.querySelector(`[data-ve-id="${targetId}"]`);
+          const curPx = Number(siteData.elementStyles[targetId]?.fontSize) || (liveEl ? parseFloat(getComputedStyle(liveEl).fontSize) : 13) || 13;
+          applyMiniFontSize(curPx - 1);
+        });
+
+        bar.querySelector(".mini-size-inc").addEventListener("click", () => {
+          if (!targetId) return;
+          const liveEl = document.querySelector(`[data-ve-id="${targetId}"]`);
+          const curPx = Number(siteData.elementStyles[targetId]?.fontSize) || (liveEl ? parseFloat(getComputedStyle(liveEl).fontSize) : 13) || 13;
+          applyMiniFontSize(curPx + 1);
         });
 
         bar.querySelector(".mini-fg-col").addEventListener("input", (ev) => {
@@ -3451,7 +3621,7 @@
           renderAll();
         });
 
-        bar.querySelectorAll(".mini-gdocs-btn")[1].addEventListener("click", () => {
+        bar.querySelector(".mini-bold-btn").addEventListener("click", () => {
           if (!targetId) return;
           const nextBold = !(siteData.elementStyles[targetId]?.bold);
           siteData.elementStyles[targetId] = { ...(siteData.elementStyles[targetId] || {}), bold: nextBold };
@@ -3465,6 +3635,9 @@
     function createGoogleDocsEditor(initialHtml = "", placeholder = "Write here...") {
       const fontOpts = getAllAvailableFontNames()
         .map(fn => `<option value="${escapeHtml(fn)}">${escapeHtml(fn)}</option>`)
+        .join("");
+      const sizeOpts = GDOCS_FONT_SIZES
+        .map(sz => `<option value="${sz}">${sz}px</option>`)
         .join("");
 
       const wrap = document.createElement("div");
@@ -3482,18 +3655,24 @@
             ${fontOpts}
           </select>
           <button type="button" class="wysiwyg-btn" style="background:rgba(34,211,238,0.2); border-color:var(--neon-cyan);" onclick="downloadFreeGoogleFontForEditor(this)">+ Font</button>
-          <button type="button" class="wysiwyg-btn" onclick="execWysiwygCmd(this, 'bold')"><strong>B</strong></button>
-          <button type="button" class="wysiwyg-btn" onclick="execWysiwygCmd(this, 'italic')"><em>I</em></button>
-          <button type="button" class="wysiwyg-btn" onclick="execWysiwygCmd(this, 'underline')"><u>U</u></button>
+          <button type="button" class="wysiwyg-btn" title="Decrease Text Size" onmousedown="event.preventDefault()" onclick="stepWysiwygFontSize(this, -2)">A-</button>
+          <select class="wysiwyg-select wysiwyg-size-sel" title="Text Size" onchange="execWysiwygFontSize(this)">
+            <option value="">Size</option>
+            ${sizeOpts}
+          </select>
+          <button type="button" class="wysiwyg-btn" title="Increase Text Size" onmousedown="event.preventDefault()" onclick="stepWysiwygFontSize(this, 2)">A+</button>
+          <button type="button" class="wysiwyg-btn" onmousedown="event.preventDefault()" onclick="execWysiwygCmd(this, 'bold')"><strong>B</strong></button>
+          <button type="button" class="wysiwyg-btn" onmousedown="event.preventDefault()" onclick="execWysiwygCmd(this, 'italic')"><em>I</em></button>
+          <button type="button" class="wysiwyg-btn" onmousedown="event.preventDefault()" onclick="execWysiwygCmd(this, 'underline')"><u>U</u></button>
           <input type="color" title="Text Colour" value="#22d3ee" style="width:28px; height:26px; padding:1px;" onchange="execWysiwygColor(this, 'foreColor')" />
           <input type="color" title="Highlight Colour" value="#ff2a85" style="width:28px; height:26px; padding:1px;" onchange="execWysiwygColor(this, 'hiliteColor')" />
-          <button type="button" class="wysiwyg-btn" onclick="execWysiwygCmd(this, 'insertUnorderedList')">• List</button>
-          <button type="button" class="wysiwyg-btn" onclick="execWysiwygCmd(this, 'insertOrderedList')">1. List</button>
+          <button type="button" class="wysiwyg-btn" onmousedown="event.preventDefault()" onclick="execWysiwygCmd(this, 'insertUnorderedList')">• List</button>
+          <button type="button" class="wysiwyg-btn" onmousedown="event.preventDefault()" onclick="execWysiwygCmd(this, 'insertOrderedList')">1. List</button>
           <button type="button" class="wysiwyg-btn" onclick="insertWysiwygLink(this)">+ Link</button>
           <button type="button" class="wysiwyg-btn" onclick="insertWysiwygImage(this)">+ Image/GIF</button>
           <button type="button" class="wysiwyg-btn" onclick="insertWysiwygTable(this)">+ Table</button>
           <button type="button" class="wysiwyg-btn" onclick="insertWysiwygVideo(this)">+ Video</button>
-          <button type="button" class="wysiwyg-btn" onclick="execWysiwygCmd(this, 'insertHorizontalRule')">― Line</button>
+          <button type="button" class="wysiwyg-btn" onmousedown="event.preventDefault()" onclick="execWysiwygCmd(this, 'insertHorizontalRule')">― Line</button>
         </div>
         <div class="wysiwyg-table-bar">
           <span style="font-size:0.66rem; font-weight:800; color:var(--neon-cyan); padding:0 4px;">Table:</span>
@@ -3651,6 +3830,77 @@
       if (!canvas || !sel.value) return;
       canvas.focus();
       document.execCommand("fontName", false, sel.value);
+    }
+
+    function applyWysiwygFontSizePx(canvas, pxSize) {
+      if (!canvas) return;
+      const clamped = Math.max(8, Math.min(72, Math.round(pxSize)));
+      canvas.focus();
+      const sel = window.getSelection();
+      const hasRange = sel && sel.rangeCount > 0 && canvas.contains(sel.anchorNode);
+      if (hasRange && !sel.isCollapsed) {
+        document.execCommand("fontSize", false, "7");
+        const createdSpans = [];
+        canvas.querySelectorAll('font[size="7"]').forEach(fontEl => {
+          const span = document.createElement("span");
+          span.style.fontSize = `${clamped}px`;
+          span.innerHTML = fontEl.innerHTML;
+          fontEl.replaceWith(span);
+          createdSpans.push(span);
+        });
+        if (createdSpans.length > 0) {
+          const range = document.createRange();
+          range.setStartBefore(createdSpans[0]);
+          range.setEndAfter(createdSpans[createdSpans.length - 1]);
+          sel.removeAllRanges();
+          sel.addRange(range);
+        }
+      } else if (hasRange) {
+        let node = sel.anchorNode;
+        if (node && node.nodeType === 3) node = node.parentElement;
+        const block = node ? node.closest("p, h1, h2, h3, li, td, th, div, span") : null;
+        if (block && block !== canvas && canvas.contains(block)) {
+          block.style.fontSize = `${clamped}px`;
+        } else {
+          canvas.style.fontSize = `${clamped}px`;
+        }
+      } else {
+        canvas.style.fontSize = `${clamped}px`;
+      }
+      const shell = canvas.closest(".wysiwyg-shell");
+      const sizeSel = shell?.querySelector(".wysiwyg-size-sel");
+      if (sizeSel) {
+        const strVal = String(clamped);
+        if (!Array.from(sizeSel.options).some(o => o.value === strVal)) {
+          const opt = document.createElement("option");
+          opt.value = strVal;
+          opt.textContent = `${clamped}px`;
+          sizeSel.appendChild(opt);
+        }
+        sizeSel.value = strVal;
+      }
+      canvas.dataset.lastFontSize = String(clamped);
+    }
+
+    function execWysiwygFontSize(sel) {
+      const canvas = getCanvasFromTool(sel);
+      if (!canvas || !sel.value) return;
+      applyWysiwygFontSizePx(canvas, Number(sel.value));
+    }
+
+    function stepWysiwygFontSize(btn, delta) {
+      const canvas = getCanvasFromTool(btn);
+      if (!canvas) return;
+      const shell = canvas.closest(".wysiwyg-shell");
+      const sizeSel = shell?.querySelector(".wysiwyg-size-sel");
+      let curPx = Number(sizeSel?.value || canvas.dataset.lastFontSize || 0);
+      if (!curPx) {
+        const sel = window.getSelection();
+        let node = (sel && sel.rangeCount > 0 && canvas.contains(sel.anchorNode)) ? sel.anchorNode : canvas;
+        if (node && node.nodeType === 3) node = node.parentElement;
+        curPx = parseFloat(getComputedStyle(node || canvas).fontSize) || 15;
+      }
+      applyWysiwygFontSizePx(canvas, curPx + delta);
     }
 
     function execWysiwygColor(inp, cmd) {
@@ -3920,6 +4170,7 @@
       if ((siteData.menuDrawerMode || "standard") === "movieReview") {
         const ext = extractMovieFilterOptionsFromPosts();
         const headLbl = document.createElement("div");
+        headLbl.dataset.veId = "movieMenuHeadingText";
         headLbl.style.cssText = "font-size:0.72rem; font-weight:800; color:var(--neon-cyan); padding:2px 4px;";
         headLbl.textContent = siteData.movieMenuHeading || "Browse Reviews";
         host.appendChild(headLbl);
@@ -4165,8 +4416,8 @@
             a.innerHTML = `
               ${imgUrl ? `<img class="glass-icon-img" src="${escapeHtml(imgUrl)}" alt="${escapeHtml(card.title)}" loading="lazy" />` : ""}
               <span class="glass-card-text">
-                <span class="glass-card-title ve-fit-text" style="display:block;">${escapeHtml(card.title)}</span>
-                <span class="glass-card-sub ve-fit-text" style="display:block;">${escapeHtml(card.sub || "")}</span>
+                <span class="glass-card-title ve-fit-text" data-ve-id="portalCard-${idx}-title" style="display:block;">${escapeHtml(card.title)}</span>
+                <span class="glass-card-sub ve-fit-text" data-ve-id="portalCard-${idx}-sub" style="display:block;">${escapeHtml(card.sub || "")}</span>
               </span>
             `;
             grid.appendChild(a);
@@ -4188,11 +4439,11 @@
             <div class="banner-left">
               ${bIcon ? `<img class="glass-icon-img" src="${escapeHtml(bIcon)}" alt="Banner Icon" loading="lazy" />` : `<span style="font-size:1rem;">📁</span>`}
               <div style="min-width:0;">
-                <div class="banner-title ve-fit-text" id="bannerTitleText">${escapeHtml(b.title || "Topic Wise Short Videos")}</div>
-                <div class="banner-sub ve-fit-text" id="bannerSubText">${escapeHtml(b.sub || "")}</div>
+                <div class="banner-title ve-fit-text" id="bannerTitleText" data-ve-id="bannerTitleText">${escapeHtml(b.title || "Topic Wise Short Videos")}</div>
+                <div class="banner-sub ve-fit-text" id="bannerSubText" data-ve-id="bannerSubText">${escapeHtml(b.sub || "")}</div>
               </div>
             </div>
-            <div class="banner-right-cta ve-fit-text" id="bannerCtaText">${escapeHtml(b.cta || "Select Topic →")}</div>
+            <div class="banner-right-cta ve-fit-text" id="bannerCtaText" data-ve-id="bannerCtaText">${escapeHtml(b.cta || "Select Topic →")}</div>
           `;
           stack.appendChild(div);
         } else if (secId === "quickPillButtons") {
@@ -4217,9 +4468,9 @@
           hub.id = "dest-portal-hub";
           hub.dataset.veId = "portalHubCard";
           hub.innerHTML = `
-            <div class="hub-tag" id="hubTagText">${escapeHtml(siteData.hubTag)}</div>
-            <h2 class="hub-heading ve-fit-text" id="hubHeadingText">${escapeHtml(siteData.hubHeading)}</h2>
-            <p class="hub-copy ve-fit-text" id="hubDescText">${escapeHtml(siteData.hubDesc)}</p>
+            <div class="hub-tag" id="hubTagText" data-ve-id="hubTagText">${escapeHtml(siteData.hubTag)}</div>
+            <h2 class="hub-heading ve-fit-text" id="hubHeadingText" data-ve-id="hubHeadingText">${escapeHtml(siteData.hubHeading)}</h2>
+            <p class="hub-copy ve-fit-text" id="hubDescText" data-ve-id="hubDescText">${escapeHtml(siteData.hubDesc)}</p>
           `;
           stack.appendChild(hub);
         } else if (secId === "homeFeaturedMediaBlock") {
@@ -4295,9 +4546,30 @@
 
             document.body.classList.toggle("shorts-fullscreen-lock", Boolean(isFullReelsTabOpen));
 
+            const rawSecTitle = (rf.sectionTitle || "").trim();
+            const displayShortsTitle = (!rawSecTitle || /shorts\s*&\s*reels\s*scroll\s*feed/i.test(rawSecTitle))
+              ? "Edu Shorts"
+              : rawSecTitle;
+
             const headRow = document.createElement("div");
             headRow.className = "section-header-row";
-            headRow.innerHTML = `<h2 class="section-title" style="margin-bottom:0;">${escapeHtml(rf.sectionTitle || "🎬 Shorts & Reels Scroll Feed")}</h2>`;
+            headRow.innerHTML = `
+              <div class="edu-shorts-brand-mark">
+                <span class="edu-shorts-icon-badge" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M17.77 10.32l-1.2-.5L18 9.06a3.74 3.74 0 0 0-3.5-6.62l-8 4.24a3.74 3.74 0 0 0 .27 6.72l1.2.5-1.43.76a3.74 3.74 0 0 0 3.5 6.62l8-4.24a3.74 3.74 0 0 0-.27-6.72z" fill="url(#eduShortsGrad)"/>
+                    <path d="M10 14.65v-5.3L14.8 12 10 14.65z" fill="#ffffff"/>
+                    <defs>
+                      <linearGradient id="eduShortsGrad" x1="3" y1="2" x2="21" y2="22" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#FF0033"/>
+                        <stop offset="1" stop-color="#FF2A85"/>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </span>
+                <span class="edu-shorts-wordmark" data-ve-id="reelsSectionTitle">${escapeHtml(displayShortsTitle)}</span>
+              </div>
+            `;
 
             const headerActions = document.createElement("div");
             headerActions.className = "reels-header-actions";
@@ -4311,8 +4583,10 @@
 
             const homeTabBtn = document.createElement("button");
             homeTabBtn.type = "button";
-            homeTabBtn.className = "btn btn-primary reels-top-home-btn";
-            homeTabBtn.textContent = "← Home";
+            homeTabBtn.className = "reels-top-home-btn";
+            homeTabBtn.setAttribute("aria-label", "Home");
+            homeTabBtn.title = "Home";
+            homeTabBtn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5"/><path d="M5.5 9.5V20a1 1 0 0 0 1 1h4v-5.5h3V21h4a1 1 0 0 0 1-1V9.5"/></svg>`;
             homeTabBtn.onclick = () => closeReelsTabToHome(true);
             headerActions.appendChild(homeTabBtn);
 
@@ -4347,8 +4621,8 @@
                   <span class="reel-rail-label">Sound</span>
                 </div>
                 <div class="reel-rail-item">
-                  <button type="button" class="reel-rail-btn reel-fit-btn" aria-label="Fit or Fill Screen">⛶</button>
-                  <span class="reel-rail-label">Fill</span>
+                  <button type="button" class="reel-rail-btn reel-cc-btn" aria-label="Toggle Captions">CC</button>
+                  <span class="reel-rail-label reel-cc-label">CC Off</span>
                 </div>
                 <div class="reel-rail-item">
                   <button type="button" class="reel-rail-btn reel-folder-btn" aria-label="Open Topic Folder">📁</button>
@@ -4419,6 +4693,7 @@
           const titleEl = document.createElement("h2");
           titleEl.className = "section-title";
           titleEl.id = "articlesSectionTitle";
+          titleEl.dataset.veId = "articlesSectionTitle";
           titleEl.textContent = siteData.articlesHeading;
           headRow.appendChild(titleEl);
 
@@ -4549,7 +4824,7 @@
             noticeBox.id = "dest-notice-board";
             noticeBox.dataset.veId = "noticeBoardPanel";
             noticeBox.innerHTML = `
-              <h2 class="section-title" style="margin-bottom:8px;">${escapeHtml(siteData.noticeTitle || "📌 Notice Board")}</h2>
+              <h2 class="section-title" data-ve-id="noticeTitleText" style="margin-bottom:8px;">${escapeHtml(siteData.noticeTitle || "📌 Notice Board")}</h2>
               <div class="notice-content-flow">${renderRichHtmlBody(siteData.noticeBody || "")}</div>
             `;
             splitWrap.appendChild(noticeBox);
@@ -4699,18 +4974,26 @@
       if (!el) return;
       const w = el.clientWidth || el.offsetWidth || 240;
       const h = el.clientHeight || el.offsetHeight || 0;
+      const styles = siteData.elementStyles || {};
 
       el.querySelectorAll(".ve-fit-text").forEach(node => {
+        const ownVeId = node.dataset?.veId || "";
+        // Never overwrite an element that has its own independent per-text style target
+        if (ownVeId && styles[ownVeId] && (styles[ownVeId].fontSize || styles[ownVeId].fontFamily)) {
+          return;
+        }
+        const isSubtitle = node.classList.contains("banner-sub") || node.classList.contains("glass-card-sub");
         if (baseFontSizePx) {
-          node.style.fontSize = `${baseFontSizePx}px`;
-        } else if (h > 0 && h < 42) {
+          const targetPx = isSubtitle ? Math.max(7.5, Math.min(11, Math.round(baseFontSizePx * 0.68))) : baseFontSizePx;
+          node.style.fontSize = `${targetPx}px`;
+        } else if (h > 0 && h < 42 && !isSubtitle) {
           const scaled = Math.max(9.5, Math.min(15, Math.round(h * 0.32)));
           node.style.fontSize = `${scaled}px`;
         }
         if (node.scrollWidth > w - 10) {
-          const cur = parseFloat(getComputedStyle(node).fontSize) || 12;
+          const cur = parseFloat(getComputedStyle(node).fontSize) || (isSubtitle ? 9 : 12);
           const ratio = Math.max(0.72, (w - 12) / Math.max(1, node.scrollWidth));
-          node.style.fontSize = `${Math.max(8.5, cur * ratio).toFixed(1)}px`;
+          node.style.fontSize = `${Math.max(isSubtitle ? 7.5 : 8.5, cur * ratio).toFixed(1)}px`;
         }
       });
 
@@ -4741,9 +5024,15 @@
           if (st.glowColor) el.style.boxShadow = `0 0 20px ${st.glowColor}`;
         }
 
+        const hasNestedVeTextChildren = el.querySelector("[data-ve-id]") !== null;
+
         if (st.textColor) el.style.color = st.textColor;
-        if (st.fontFamily) el.style.fontFamily = st.fontFamily;
-        if (st.fontSize) el.style.fontSize = `${st.fontSize}px`;
+        if (st.fontFamily && !hasNestedVeTextChildren) {
+          el.style.fontFamily = `"${st.fontFamily}", sans-serif`;
+        }
+        if (st.fontSize) {
+          el.style.fontSize = `${st.fontSize}px`;
+        }
         if (typeof st.bold === "boolean") el.style.fontWeight = st.bold ? "800" : "";
         if (st.radius !== undefined && st.radius !== "") el.style.borderRadius = `${st.radius}px`;
         if (st.width) el.style.width = `${st.width}px`;
@@ -4751,7 +5040,9 @@
         const dx = Number(st.posX || 0);
         const dy = Number(st.posY || 0);
         el.style.transform = (dx || dy) ? `translate(${dx}px, ${dy}px)` : "";
-        autoFitBoxContents(el, st.fontSize || 0);
+        if (!hasNestedVeTextChildren || st.height || st.width) {
+          autoFitBoxContents(el, hasNestedVeTextChildren ? 0 : (st.fontSize || 0));
+        }
       });
     }
 
@@ -5924,7 +6215,7 @@
 
       const navList = document.getElementById("navEditorList");
       navList.innerHTML = "";
-      (siteData.navButtons || []).forEach(item => addNavButtonRow(item));
+      (siteData.navButtons || []).forEach((item, idx) => addNavButtonRow(item, idx));
 
       const menuList = document.getElementById("menuBuilderEditorList");
       menuList.innerHTML = "";
@@ -5932,7 +6223,7 @@
 
       const cardsList = document.getElementById("cardsEditorList");
       cardsList.innerHTML = "";
-      (siteData.portalCards || []).forEach(card => addPortalCardRow(card));
+      (siteData.portalCards || []).forEach((card, idx) => addPortalCardRow(card, idx));
 
       renderGlobalReviewMetaEditor();
       resetPostComposerToNew();
@@ -5959,12 +6250,18 @@
       refreshAllAdminPreviews();
     }
 
-    function addNavButtonRow(data = { label: "", actionType: "link", target: "" }) {
+    function addNavButtonRow(data = { label: "", actionType: "link", target: "" }, idx = null) {
+      const host = document.getElementById("navEditorList");
+      const pillIdx = typeof idx === "number" ? idx : host.querySelectorAll(".android-tile-card").length;
       const type = data.actionType || "link";
       const box = document.createElement("div");
       box.className = "android-tile-card form-grid two-col";
       box.innerHTML = `
-        <div class="field-group"><label>Pill Label</label><input type="text" class="nav-label" value="${escapeHtml(data.label)}" /></div>
+        <div class="field-group" data-style-target="quickPill-${pillIdx}">
+          <label>Pill Label</label>
+          <input type="text" class="nav-label" value="${escapeHtml(data.label)}" />
+          <div class="mini-gdocs-bar"></div>
+        </div>
         <div class="field-group">
           <label>Action Type</label>
           <select class="nav-type" onchange="renderDynamicTargetForRow(this, this.closest('.android-tile-card').querySelector('.nav-target-wrap'), 'nav-target')">
@@ -5985,16 +6282,27 @@
           </div>
         </div>
       `;
-      document.getElementById("navEditorList").appendChild(box);
+      host.appendChild(box);
+      hydrateMiniGdocsBars(box);
     }
 
-    function addPortalCardRow(data = { title: "", sub: "", image: "", actionType: "link", url: "" }) {
+    function addPortalCardRow(data = { title: "", sub: "", image: "", actionType: "link", url: "" }, idx = null) {
+      const host = document.getElementById("cardsEditorList");
+      const cardIdx = typeof idx === "number" ? idx : host.querySelectorAll(".android-tile-card").length;
       const act = data.actionType || "link";
       const box = document.createElement("div");
       box.className = "android-tile-card form-grid two-col";
       box.innerHTML = `
-        <div class="field-group"><label>Button Title</label><input type="text" class="card-title-inp" value="${escapeHtml(data.title)}" /></div>
-        <div class="field-group"><label>Small Subtitle</label><input type="text" class="card-sub-inp" value="${escapeHtml(data.sub)}" /></div>
+        <div class="field-group" data-style-target="portalCard-${cardIdx}-title">
+          <label>Button Title</label>
+          <input type="text" class="card-title-inp" value="${escapeHtml(data.title)}" />
+          <div class="mini-gdocs-bar"></div>
+        </div>
+        <div class="field-group" data-style-target="portalCard-${cardIdx}-sub">
+          <label>Small Subtitle</label>
+          <input type="text" class="card-sub-inp" value="${escapeHtml(data.sub)}" />
+          <div class="mini-gdocs-bar"></div>
+        </div>
         <div class="field-group">
           <label>Icon / Drive GIF Link</label>
           <input type="text" class="card-img-inp" value="${escapeHtml(data.image)}" oninput="attachLivePreviewToInput(this)" />
@@ -6020,8 +6328,9 @@
           </div>
         </div>
       `;
-      document.getElementById("cardsEditorList").appendChild(box);
+      host.appendChild(box);
       attachLivePreviewToInput(box.querySelector(".card-img-inp"));
+      hydrateMiniGdocsBars(box);
     }
 
     function collectAdminFormData() {
